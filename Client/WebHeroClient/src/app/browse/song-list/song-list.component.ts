@@ -6,11 +6,10 @@ import { SongTileComponent } from './song-tile/song-tile.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-song-list',
-  standalone: true,
-  imports: [SongTileComponent, CommonModule],
-  templateUrl: './song-list.component.html',
-  styleUrl: './song-list.component.css'
+    selector: 'app-song-list',
+    imports: [SongTileComponent, CommonModule],
+    templateUrl: './song-list.component.html',
+    styleUrl: './song-list.component.css'
 })
 export class SongListComponent {
   @Input({ required: true }) songList!: Song[];

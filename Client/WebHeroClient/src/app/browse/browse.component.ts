@@ -7,11 +7,10 @@ import { Song } from '../models/song';
 import { SongListComponent } from './song-list/song-list.component';
 
 @Component({
-  selector: 'app-browse',
-  standalone: true,
-  imports: [SongListComponent],
-  templateUrl: './browse.component.html',
-  styleUrl: './browse.component.css'
+    selector: 'app-browse',
+    imports: [SongListComponent],
+    templateUrl: './browse.component.html',
+    styleUrl: './browse.component.css'
 })
 export class BrowseComponent {
 

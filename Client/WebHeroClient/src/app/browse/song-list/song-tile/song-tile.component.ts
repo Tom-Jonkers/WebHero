@@ -4,11 +4,10 @@ import { Component, Input } from '@angular/core';
 import { Song } from '../../../models/song';
 
 @Component({
-  selector: 'app-song-tile',
-  standalone: true,
-  imports: [],
-  templateUrl: './song-tile.component.html',
-  styleUrl: './song-tile.component.css'
+    selector: 'app-song-tile',
+    imports: [],
+    templateUrl: './song-tile.component.html',
+    styleUrl: './song-tile.component.css'
 })
 export class SongTileComponent {
   @Input({ required: true }) song!: Song;
