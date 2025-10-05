@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebHeroAPI.Models;
 using WebHeroAPI.Services;
 
 namespace WebHeroAPI.Controllers
@@ -15,10 +16,10 @@ namespace WebHeroAPI.Controllers
         }
         
         [HttpGet]
-        [Route("{elstringo}")]
-        public ActionResult<String> GetTest(string elstringo)
+        public IEnumerable<Song> GetDefaultList()
         {
-            return elstringo + " mais plus cool";
+            IEnumerable<Song> songs = _scrapeService.getSongList();
+            return songs;
         }
 
     }

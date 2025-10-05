@@ -1,4 +1,6 @@
 
+using WebHeroAPI.Services;
+
 namespace WebHeroAPI
 {
     public class Program
@@ -6,6 +8,9 @@ namespace WebHeroAPI
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // Register services
+            builder.Services.AddScoped<ScrapeService>();
 
             // Add services to the container.
 
