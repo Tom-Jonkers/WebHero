@@ -100,8 +100,6 @@ p {
     border-radius: 72px;
     background: rgba(0, 0, 0, 0.50);
 
-    backdrop-filter: blur(2px);
-
     /* within InfoFrame */
 }
 
@@ -126,15 +124,26 @@ p {
 .PlayButton {
     display: flex;
     width: 168px;
-    height: 67px;
+    height: 57px;
     justify-content: center;
     align-items: center;
     gap: 10px;
 
-    border-radius: 72px;
-    border: 5px solid #FDE61C;
-
+    cursor: pointer;
+    border: double 5px transparent;
+    border-radius: 80px;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), radial-gradient(circle at top left, #d400ff, #2067ff);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    transition: border-width 300ms, background-image 1000ms, box-shadow 300ms;
     /* within PlayTile */
+}
+
+.PlayButton:hover {
+    border-width: 5px;
+    background-image: linear-gradient(rgb(0, rgb(0, 0, 0), rgb(0, 0, 0)), radial-gradient(circle at top left, #2067ff, #d400ff));
+    box-shadow: 0px 0px 12px 0px #d400ff;
+    
 }
 
 .PlayButton p {
@@ -144,5 +153,6 @@ p {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    cursor: pointer;
 }
 

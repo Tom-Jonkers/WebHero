@@ -1,6 +1,6 @@
 <div class="SongTile">
     <div class="ImageFrame">
-        <img src="{{song.imageURL}}" alt="{{song.album}}">
+        <img [src]="song.imageURL" alt="{{song.album}}">
     </div>
     <div class="InfoFrame">
         <div class="Info">
@@ -15,7 +15,7 @@
         </div>
         <div class="Info">
             <div class="Line">
-                <p class="smallText">Length <span class="darkText">:</span> {{song.length}}</p>
+                <p class="smallText">Length <span class="darkText">:</span> {{visualLength}}</p>
                 <p class="smallText">Note Count <span class="darkText">:</span> {{song.noteCount}}</p>
                 <p class="smallText">NPS <span class="darkText">:</span> {{song.NPS}}</p>
             </div>

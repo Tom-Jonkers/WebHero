@@ -13,8 +13,12 @@ export class SongTileComponent {
   @Input({ required: true }) song!: Song;
 
   public visualDifficulty: string = ""
+  public visualLength: string = ""
+  public palette: string[] = []
 
-  ngOnInit() {
+  constructor() {}
+
+  async ngOnInit() {
     for (let i: number = 0; i < 7; i++)
     {
       if (i <= this.song.difficulty)
@@ -22,5 +26,7 @@ export class SongTileComponent {
       else
         this.visualDifficulty += "☆ "
     }
+
+    this.visualLength = Math.floor(this.song.length / 60) + ":" + String(this.song.length % 60).padStart(2, '0')
   }
 }
