@@ -1,14 +1,25 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebHeroAPI.Services;
 
 namespace WebHeroAPI.Controllers
 {
-
-    public class SongController
+    [Route("[controller]/[action]/")]
+    [ApiController]
+    public class SongController : ControllerBase
     {
-        [HttpGet(Name = "GetTest")]
-        public String GetTest()
+        ScrapeService _scrapeService;
+
+        public SongController(ScrapeService scrapeService)
         {
-            return "";
+            _scrapeService = scrapeService;
         }
+        
+        [HttpGet]
+        [Route("{elstringo}")]
+        public ActionResult<String> GetTest(string elstringo)
+        {
+            return elstringo + " mais plus cool";
+        }
+
     }
 }

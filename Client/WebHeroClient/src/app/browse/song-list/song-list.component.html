@@ -1,0 +1,5 @@
+<div class="SongList">
+@for (song of songList; track song.hash) {
+    <app-song-tile [song]="song"></app-song-tile>
+  }
+</div>

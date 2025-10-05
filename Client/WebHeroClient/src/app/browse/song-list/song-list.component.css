@@ -1,0 +1,9 @@
+.SongList {
+    display: flex;
+    width: 940px;
+    height: 914px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+}

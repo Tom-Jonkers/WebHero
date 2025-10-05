@@ -1,0 +1,33 @@
+<div class="SongTile">
+    <div class="ImageFrame">
+        <img src="{{song.imageURL}}" alt="{{song.album}}">
+    </div>
+    <div class="InfoFrame">
+        <div class="Info">
+            <div class="Line">
+                <p class="bigText">{{song.artist}}</p>
+                <p class="bigText">{{song.name}}</p>
+            </div>
+            <div class="Line">
+                <p class="smallText">{{song.year}}</p>
+                <p class="smallText">{{song.album}}</p>
+            </div>
+        </div>
+        <div class="Info">
+            <div class="Line">
+                <p class="smallText">Length <span class="darkText">:</span> {{song.length}}</p>
+                <p class="smallText">Note Count <span class="darkText">:</span> {{song.noteCount}}</p>
+                <p class="smallText">NPS <span class="darkText">:</span> {{song.NPS}}</p>
+            </div>
+        </div>
+        <div class="PlayTile">
+            <div class="DifficultyMeter">
+                <p>{{visualDifficulty}}</p>
+            </div>
+            <div class="PlayButton">
+                <p>PLAY</p>
+            </div>
+        </div>
+    </div>
+    
+</div>

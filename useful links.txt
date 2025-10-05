@@ -1,1 +1,4 @@
 https://github.com/TheNathannator/GuitarGame_ChartFormats
+
+SONG DOWNLOAD LINK
+https://www.enchor.us/download?md5=[SONG MD5 HASH] (ex: 6ed25e935d14cc317e570706a2b9492a)

@@ -8,8 +8,8 @@
 
 .navbar {
   display: flex;
-  width: 940px;
-  padding: 10px 80px;
+  width: 880px;
+  padding: 10px 30px;
   justify-content: space-between;
   align-items: center;
 
