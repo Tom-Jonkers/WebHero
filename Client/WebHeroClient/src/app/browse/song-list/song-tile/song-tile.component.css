@@ -95,7 +95,7 @@ p {
 
     border-radius: 72px;
     background: rgba(0, 0, 0, 0.50);
-
+    z-index: 1;
     /* within InfoFrame */
 }
 
@@ -137,15 +137,43 @@ p {
     background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), radial-gradient(circle at top left, var(--g1), var(--g0));
     background-origin: border-box;
     background-clip: content-box, border-box;
+    position: relative; /* required for pseudo-element glow */
+    overflow: visible;
+    transition: 180ms ease;
     /* within PlayTile */
+}
+
+.PlayButton::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    width: 120%;
+    height: 120%;
+    border-radius: inherit;
+    background: radial-gradient(circle at 20% 20%, var(--g1, rgba(255,255,255,0.6)) 0%, transparent 30%),
+                radial-gradient(circle at 20% 80%, var(--g1, rgba(255,255,255,0.6)) 0%, transparent 30%),
+                radial-gradient(circle at 80% 80%, var(--g0, rgba(0,0,0,0.6)) 0%, transparent 30%),
+                radial-gradient(circle at 80% 20%, var(--g0, rgba(0,0,0,0.6)) 0%, transparent 30%);
+    filter: blur(12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 180ms ease;
+    z-index: -1; /* keep glow behind the button content */
 }
 
 .PlayButton:hover {
     height: 47px;
     width: 158px;
     border-width: 10px;
-    box-shadow: 0px 0px 12px 0px var(--g1);
+    box-shadow: 0px 0px 12px 0px var(--g0);
     
+}
+
+.PlayButton:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.06);
 }
 
 .PlayButton p {
