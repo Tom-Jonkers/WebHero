@@ -20,10 +20,6 @@ p {
 
 .darkText {
     color: rgba(255, 255, 255, 0.50);
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
 }
 
 .SongTile {
@@ -103,6 +99,12 @@ p {
     /* within InfoFrame */
 }
 
+.PlayTile img {
+    width: 66px;
+    align-self: stretch;
+    aspect-ratio: 1/1;
+}
+
 .DifficultyMeter {
     display: flex;
     padding: 10px 30px;
@@ -132,17 +134,17 @@ p {
     cursor: pointer;
     border: double 5px transparent;
     border-radius: 80px;
-    background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), radial-gradient(circle at top left, #d400ff, #2067ff);
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), radial-gradient(circle at top left, var(--g1), var(--g0));
     background-origin: border-box;
     background-clip: content-box, border-box;
-    transition: border-width 300ms, background-image 1000ms, box-shadow 300ms;
     /* within PlayTile */
 }
 
 .PlayButton:hover {
-    border-width: 5px;
-    background-image: linear-gradient(rgb(0, rgb(0, 0, 0), rgb(0, 0, 0)), radial-gradient(circle at top left, #2067ff, #d400ff));
-    box-shadow: 0px 0px 12px 0px #d400ff;
+    height: 47px;
+    width: 158px;
+    border-width: 10px;
+    box-shadow: 0px 0px 12px 0px var(--g1);
     
 }
 

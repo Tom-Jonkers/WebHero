@@ -30,6 +30,30 @@ export class BrowseComponent {
 
   this.songs = [
     new Song(
+      "Next Semester",
+      "twenty one pilots",
+      "2024",
+      "Clancy",
+      355,
+      2847,
+      8.02,
+      3,
+      "https://files.enchor.us/5ba8d49ff64a354af264cb509ebdf532.jpg",
+      "supermariostyle2"
+    ),
+    new Song(
+      "Legend",
+      "twenty one pilots",
+      "2018",
+      "Trench",
+      355,
+      2847,
+      8.02,
+      3,
+      "https://files.enchor.us/ff8183965a5aa79bae581904c4bb2b8c.jpg",
+      "supermariostyle"
+    ),
+    new Song(
       "Bohemian Rhapsody",
       "Queen",
       "1975",
