@@ -1,6 +1,14 @@
 <div class="SongTile">
     <div class="ImageFrame">
-        <img [src]="song.imageURL" alt="{{song.album}}">
+        @if (song.imageURL == "https://files.enchor.us/null.jpg")
+        {
+            <img src="/notFound.png" alt="{{song.album}}">
+        }
+        @else
+        {
+            <img [src]="song.imageURL" alt="{{song.album}}">
+        }
+        
     </div>
     <div class="InfoFrame">
         <div class="Info">

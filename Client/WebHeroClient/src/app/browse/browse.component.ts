@@ -1,21 +1,22 @@
-import { SearchQuery } from './../models/searchQuery';
 // en gros lui y va effectuer la recherche de chansons et recracher la liste des chansons dans SongList
 
-import { Component, ɵflushModuleScopingQueueAsMuchAsPossible } from '@angular/core';
+import { Song } from './../models/song';
+import { SearchQuery } from './../models/searchQuery';
+import { Component } from '@angular/core';
 import { HttpService } from '../services/http.service';
-import { SongTileComponent } from './song-list/song-tile/song-tile.component';
-import { Song } from '../models/song';
 import { SongListComponent } from './song-list/song-list.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'app-browse',
-    imports: [SongListComponent],
+    imports: [SongListComponent, CommonModule, FormsModule],
     templateUrl: './browse.component.html',
     styleUrl: './browse.component.css'
 })
 export class BrowseComponent {
 
-  
+  searchBar : string = ""
 
   songs : Song[] = [];
 
@@ -24,10 +25,12 @@ export class BrowseComponent {
   }
 
   async ngOnInit() : Promise<void> {
+    this.songs = await this.http.getSongs(this.searchBar)
+  }
 
-  const searchQuery = new SearchQuery()
+  async searchSongs() {
 
-  this.songs = await this.http.getSongs(searchQuery);
+    this.songs = await this.http.getSongs(this.searchBar);
 
   }
 
