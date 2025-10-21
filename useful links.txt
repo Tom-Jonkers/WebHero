@@ -1,4 +1,5 @@
 https://github.com/TheNathannator/GuitarGame_ChartFormats
+https://github.com/YARC-Official/YARG.Core (for extracting charts maybe)
 
 SONG DOWNLOAD LINK
 https://www.enchor.us/download?md5=[SONG MD5 HASH] (ex: 6ed25e935d14cc317e570706a2b9492a)
