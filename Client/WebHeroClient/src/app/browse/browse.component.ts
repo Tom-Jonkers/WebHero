@@ -1,7 +1,6 @@
 // en gros lui y va effectuer la recherche de chansons et recracher la liste des chansons dans SongList
 
 import { Song } from './../models/song';
-import { SearchQuery } from './../models/searchQuery';
 import { Component } from '@angular/core';
 import { HttpService } from '../services/http.service';
 import { SongListComponent } from './song-list/song-list.component';
@@ -34,5 +33,8 @@ export class BrowseComponent {
 
   }
 
+  onInputChanged() {
+    this.searchSongs()
+  }
 
 }

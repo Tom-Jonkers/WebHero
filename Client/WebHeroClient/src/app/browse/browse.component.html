@@ -1,7 +1,7 @@
 <div class="searchContainer">
     <div class="searchBar">
         <img src="/search-svgrepo-com.svg">
-        <input [(ngModel)]="searchBar" type="text" placeholder="Search..." (keydown.enter)="searchSongs()">
+        <input [(ngModel)]="searchBar" (input)="onInputChanged()" type="text" placeholder="Search..." (keydown.enter)="searchSongs()">
     </div>
     <div class="moreOptions">
         <p>+</p>
