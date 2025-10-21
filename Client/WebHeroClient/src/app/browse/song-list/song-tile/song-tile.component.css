@@ -8,7 +8,14 @@ p {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Number of lines to show */
+    -webkit-box-orient: vertical; 
 }
+
 
 .smallText {
     color: #FFF;
