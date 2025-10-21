@@ -47,7 +47,7 @@ var convertedArray: Song[] = [];
         guitarCount,                                              // noteCount
         guitarNPS,                                                // NPS
         song.diff_guitar,                                         // Difficulty
-        "https://files.enchor.us/" + song.albumArtMd5 + ".jpg",   // imageURL
+        "https://images.weserv.nl/?url=files.enchor.us/" + song.albumArtMd5 + ".jpg&w=240&h=240&fit=cover",   // imageURL
         song.md5                                                  // hash
       )
     )
