@@ -2,6 +2,7 @@
 import { ColorThiefService } from '@soarlin/angular-color-thief';
 import { Component, Input, ElementRef } from '@angular/core';
 import { Song } from '../../../models/song';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-song-tile',
@@ -18,7 +19,7 @@ export class SongTileComponent {
   public palette: number[][] = []
   public gradient: string[] = []
 
-  constructor(private colorThief: ColorThiefService, private el: ElementRef<HTMLElement>) {}
+  constructor(private colorThief: ColorThiefService, private el: ElementRef<HTMLElement>, private router: Router) {}
 
   async ngOnInit() {
     for (let i: number = 0; i < 7; i++)
@@ -77,5 +78,9 @@ export class SongTileComponent {
       this.el.nativeElement.style.setProperty(`--g${i}`, this.gradient[i]);
     }
   
+  }
+
+  playSong() {
+    this.router.navigate(['/play', this.song.hash]);
   }
 }
